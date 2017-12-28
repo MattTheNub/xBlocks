@@ -60,6 +60,9 @@
     ext.addStuff = function(what, where) {
         $(where).append(what)
     }
+    ext.xBlocksVer = function() {
+        return "0.1.0"
+    }
     var descriptor = {
         "menus": {
             "searchEngines": ['Yahoo!', 'Google', 'Scratch'],
@@ -67,15 +70,16 @@
             "moreMathOp": ["^", "√"],
         },
         blocks: [
-        ['', 'open link %s', 'openLink', 'http://example.org/'], 
-        ['f', 'open project id: %n', 'openProject', 98468056], 
-        ['r', 'if %b then %s else %s', 'ifThenElse', null , '', ''], 
-        ['r', '%n %m.moreMathOp %n', 'power', 2, "^", 3], 
-        ['f', 'cause Scrach to self-destruct', 'destroyScratch'], 
-        ['h', 'when %b', 'whenThis', null ], 
-        ['', 'search %m.searchEngines for %s', 'search', 'Scratch', ''], 
-        ['r', '%m.enDeCode URI %s', 'encodeOrDecode', 'encode', '~!@#$%^&*()`:";\'\\\/+=-_,.<>'], 
-        ['', 'insert %s at the end of %s of HTML file', 'addStuff', 'Hello world!', 'body'], 
+            ['', 'open link %s', 'openLink', 'http://example.org/'], 
+            ['f', 'open project id: %n', 'openProject', 98468056], 
+            ['r', 'if %b then %s else %s', 'ifThenElse', null , '', ''], 
+            ['r', '%n %m.moreMathOp %n', 'power', 2, "^", 3], 
+            ['f', 'cause Scrach to self-destruct', 'destroyScratch'], 
+            ['h', 'when %b', 'whenThis', null ], 
+            ['', 'search %m.searchEngines for %s', 'search', 'Scratch', ''], 
+            ['r', '%m.enDeCode URI %s', 'encodeOrDecode', 'encode', '~!@#$%^&*()`:";\'\\\/+=-_,.<>'], 
+            ['', 'insert %s at the end of %s of HTML file', 'addStuff', 'Hello world!', 'body'],
+            ['r', 'xBlocks version', 'xBlocksVer']
         ]
     };
     ScratchExtensions.register('xBlocks', descriptor, ext);
