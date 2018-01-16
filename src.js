@@ -1,8 +1,3 @@
-/*
----
-title: xBlocks - Source Code
----
-*/
 (function(ext, $) {
     ext._shutdown = function() {}
     ;
